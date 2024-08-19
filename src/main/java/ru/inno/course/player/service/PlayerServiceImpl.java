@@ -7,11 +7,11 @@ import ru.inno.course.player.model.Player;
 import java.util.*;
 
 public class PlayerServiceImpl implements PlayerService {
-    private Map<Integer, Player> players;
-    private Set<String> nicknames;
+    public Map<Integer, Player> players;
+    public Set<String> nicknames;
     private int counter = 0;
     private final DataProvider provider;
-    public PlayerServiceImpl() {
+    public PlayerServiceImpl(DataProvider mockDataProvider) {
         provider = new DataProviderJSON();
         initStorages();
     }

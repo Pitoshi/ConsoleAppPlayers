@@ -1,5 +1,6 @@
 package ru.inno.course.player;
 
+import ru.inno.course.player.data.DataProvider;
 import ru.inno.course.player.model.Player;
 import ru.inno.course.player.service.PlayerService;
 import ru.inno.course.player.service.PlayerServiceImpl;
@@ -11,7 +12,8 @@ public class ConsoleApp {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        PlayerService service = new PlayerServiceImpl();
+        DataProvider DataProvider = null;
+        PlayerService service = new PlayerServiceImpl(DataProvider);
 
         printHelp();
 
